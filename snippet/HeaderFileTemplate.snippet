@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>头文件模板</Title>
+      <Author>Ant</Author>
+      <Description>Header file template.</Description>
+      <HelpUrl>http://www.ant.sh</HelpUrl>
+      <Shortcut>HFT</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>FILE_PATH</ID>
+          <ToolTip>FILE_PATH</ToolTip>
+          <Default>FILEPATH</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[///////////////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright (c) 2017 The Authors of ANT(http:://ant.sh) . All Rights Reserved. 
+// Use of this source code is governed by a BSD-style license that can be 
+// found in the LICENSE file. 
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef $FILE_PATH$_INCLUDE_H_
+#define $FILE_PATH$_INCLUDE_H_
+
+
+
+#endif // !$FILE_PATH$_INCLUDE_H_]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

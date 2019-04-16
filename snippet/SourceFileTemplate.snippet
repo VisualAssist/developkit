@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>源文件模板</Title>
+      <Author>Ant</Author>
+      <Description>Source file template.</Description>
+      <HelpUrl>http://www.ant.sh</HelpUrl>
+      <Shortcut>SFT</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>HEADER_FILE</ID>
+          <ToolTip>HEADER_FILE</ToolTip>
+          <Default>HEADER_FILE</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright (c) 2017 The Authors of ANT(http://ant.sh). All Rights Reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+//
+////////////////////////////////////////////////////////////////////////////////
+#include "$HEADER_FILE$.h"
+
+#if defined(COMPILER_MSVC)
+// We usually use the _CrtDumpMemoryLeaks() with the DEBUGER and CRT library to
+// check a memory leak.
+#if defined(_DEBUG) && _MSC_VER > 1000 // VC++ DEBUG
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+#define  DEBUG_NEW new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#if defined(DEBUG_NEW)
+#define new DEBUG_NEW
+#endif // DEBUG_NEW
+#endif // VC++ DEBUG
+#endif // defined(COMPILER_MSVC)
+      
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

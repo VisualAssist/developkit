@@ -1,0 +1,1 @@
+git config core.sparsecheckout true; git checkout master; git read-tree -mu HEAD; git pull --unshallow; git fetch -v; git pull
